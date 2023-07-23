@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionlidade</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background: rgb(105, 103, 221);
+      font: normal 18px Arial;
+      text-align: center;
+      padding: 30px;
+    }
+    h1{
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      padding: 30px;
+    }
+    p{
+      margin-bottom: 20px;
+    }
+    #txtpais{
+      height: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    #btn{
+      height: 30px;
+      width: 200px;
+      margin-bottom: 20px;  
+      border: none;    
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.788);
+      color: white;
+      text-transform: uppercase;
+    }
+    #btn:hover{
+      background-color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<body>
+  <h1>Em qual país?</h1>
+  <p>Qual pais você nasceu?</p>
+  <input type="text" name="txtpais" id="txtpais" placeholder="Digite aqui....">
+  <input type="button" value="Verificar" id="btn" onclick="verificar()">
+  <div id="pais"></div>
+
+  <script>
+    function verificar(){
+    var tpais = window.document.getElementById('txtpais')
+    var pais = window.document.getElementById('pais')
+    var br = (txtpais.value)
+    pais.innerHTML = `<p>Nascido no ${br}.</p>`
+    if(br =='Brasil'){    
+    pais.innerHTML+=('Você é Brasileiro.')
+    }
+    else{
+      pais.innerHTML+=('Você é Estrangeiro.')
+    }
+    }  
+  </script>
+  
+</body>
+</html>
